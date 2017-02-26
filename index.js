@@ -34,20 +34,24 @@ angular.module('demo1', [])
 .directive('te', function() {
   return {
     restrict: 'A',
-    transclude: true,
+    // transclude: true,
     scope: {
-      type: '=',
-      info: '='
+      // type: '=',
+      // info: '='
+      v1: '=',
+      v2: '='
     },
-    template: function(element, attrs) {
-      // ng-transclude
-      switch (attrs.type) {
-        case '1':
-          return '<dm1 p="{{info}}" v1="directive v1" v2="directive v2" ng-transclude></dm1>';
-        case '2':
-          return '<dm2 p="info"></dm2>';
-      };
-    },
+    templateUrl: 'demo1.tpl.html',
+    // template: '<dm1 v1="directive v1" v2="directive v2"></dm1>',
+    // template: function(element, attrs) {
+    //   // ng-transclude
+    //   switch (attrs.type) {
+    //     case '1':
+    //       return '<dm1 p="{{info}}" v1="directive v1" v2="directive v2"></dm1>';
+    //     case '2':
+    //       return '<dm2 p="info"></dm2>';
+    //   };
+    // },
     link: function(scope, element) {
       console.log(11111);
     }
