@@ -6,11 +6,14 @@
   </head>
   <body ng-controller="DemoCtrl as demo">
 
-    <dm1 v1="1122" v2="4455"></dm1>
+    <!-- <dm1 v1="1122" v2="4455"></dm1> -->
     <!-- <dm2 p="demo.info"></dm2> -->
-    <div te type="1" v1="33333" v2="demo.info"></div>
+    <!-- <div te type="1" v1="33333" v2="demo.info"></div> -->
     <!-- <div te type="2" info="bbb"></div> -->
     <!-- <div ng-include="'demo1.tpl.html'"></div> -->
+    <div popup info-data="demo.infoImage" type="text"></div>
+    <tpl-image info="demo.infoImage"></tpl-image>
+    <tpl-text info="demo.infoText"></tpl-text>
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="index.js"></script>
